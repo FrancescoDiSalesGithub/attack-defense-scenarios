@@ -16,7 +16,7 @@ Where victimip is the ip of the webserver where the fuzzing is starting.
 
 # Defense side
 
-On the other end suppose that we have a webserver like nginx, checking on access.log (it can be find at **/var/log/nginx/access.log**) we can find something like this:
+On the other end suppose that we have a webserver like nginx, checking on access.log (it can be found at **/var/log/nginx/access.log**) we can find something like this:
 
 ```
 192.168.1.2 - - [18/Mar/2024:18:59:57 +0000] "GET /13657 HTTP/1.1" 404 134 "-" "Fuzz Faster U Fool v2.1.0-dev"
