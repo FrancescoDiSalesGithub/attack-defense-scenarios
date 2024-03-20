@@ -31,7 +31,7 @@ Let's write the following rule in our ruleset (it can be the local one or a cust
 
 ```
 
-alert tcp any any <> any any (msg:"FUZZ tool is used against the webserver";content:"User-Agent: Fuzz Faster";sid:1001;rev:1);
+alert tcp any any <> any 80 (msg:"FUZZ tool is used against the webserver";content:"User-Agent: Fuzz Faster";sid:1001;rev:1);
 
 ```
 
