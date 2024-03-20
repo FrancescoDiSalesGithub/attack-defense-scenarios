@@ -51,7 +51,7 @@ The measure used above can be easily hacked by adding the parameter -H to fuzz:
 
 ```
 
-ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -H 'User-Agent:Firefox' -u http://192.168.96.135/FUZZ
+ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -H 'User-Agent:Firefox' -u http://192.168.1.3/FUZZ
 
 ```
 
