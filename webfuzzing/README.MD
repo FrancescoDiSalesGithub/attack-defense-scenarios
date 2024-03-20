@@ -47,9 +47,11 @@ With this command we can test if fuzz is working against our web server
 
 ## Hacking first remediation
 
-The measure used above can be easily hacked by adding the following parameter to fuzz:
+The measure used above can be easily hacked by adding the parameter -H to fuzz:
 
 ```
-TODO
+
+ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:FUZZ -H 'User-Agent:Firefox' -u http://192.168.96.135/FUZZ
+
 ```
 
