@@ -124,4 +124,13 @@ add the nginx log file to monitor
 
 ```
 
+Go to the splunk server and choose the option settings -> Add data. It will redirect to a web page where there are three options:
+
+* Upload from my computer
+* Monitor this splunk instance
+* Forward
+
+Choose the last one. If the installation of the universal forwarder has gone right, splunk will show you a page of all the universal forwarder hosts you can choose.
+After choosing a host press on the green button on the top right, and you will have another form with a lot of options. In this case choose **File and directory**. In the file and directory form at the field File or directory, write the path you want to monitor. Pressing the next button, will trigger another form where it will ask you to give an index to the resource you are monitoring. The form, will let you create a custom index if you want to. Press on verify button at the top right and then press again the green button to confirm your settings.
+
 
