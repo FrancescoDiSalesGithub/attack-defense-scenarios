@@ -120,7 +120,7 @@ add the nginx log file to monitor
 
 ```
 
-./splunk monitor add /var/log/nginx/access.log
+./splunk add monitor /var/log/nginx
 
 ```
 
