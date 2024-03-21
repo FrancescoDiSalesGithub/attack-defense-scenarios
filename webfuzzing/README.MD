@@ -55,3 +55,73 @@ ffuf -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt:F
 
 ```
 
+# Adding additional defense by using splunk
+
+To keep tracking of a possible attacker, we can use with snort, the tool splunk. In the following paragraph we will install a splunk universal forwarder on the server and create another server where splunk enterprise is installed.
+
+## Splunk enterprise server install on the linux server
+
+To download the splunk enterpise server, you can try two options:
+
+* 1 - Registering on the splunk website and download the universal forwarder for linux
+* 2 - Clone my github repository: 
+
+After this, go to the bin folder and run splunk:
+
+```
+
+./splunk start
+
+```
+
+press the enter button, and then choose the password for your splunk server, and after go to:
+
+```
+
+http://localhost:8000
+
+```
+
+insert as username admin and as password the password you have just inserted in the previous step.
+
+## Splunk universal forwarder install on the linux server
+
+From the server where there is snort, you have to download the splunk universal forwarder, you can try two options:
+
+* 1 - Registering on the splunk website and download the universal forwarder for linux
+* 2 - Clone my github repository: 
+
+After this, go to the bin folder and run splunk:
+
+```
+
+./splunk start
+
+```
+
+add the forwarder by using the following command:
+
+```
+
+./splunk add forwarder http://<IP_SPLUNK_SIEM>:9997
+
+```
+
+then add the deploy poll:
+
+
+```
+
+./splunk set deploy-poll http://<IP_SPLUNK_SIEM>:8889
+
+```
+
+add the nginx log file to monitor
+
+```
+
+./splunk monitor add /var/log/nginx/access.log
+
+```
+
+
