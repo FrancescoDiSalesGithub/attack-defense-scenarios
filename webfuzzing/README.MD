@@ -112,7 +112,7 @@ then add the deploy poll:
 
 ```
 
-./splunk set deploy-poll http://<IP_SPLUNK_SIEM>:8889
+./splunk set deploy-poll http://<IP_SPLUNK_SIEM>:8089
 
 ```
 
